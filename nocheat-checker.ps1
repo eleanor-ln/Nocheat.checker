@@ -27,9 +27,9 @@ if (-not $isAdmin) {
     exit
 }
 
-Write-Host "==========================================" -ForegroundColor Lime
-Write-Host "         NoCheat Checker Loader           " -ForegroundColor Lime
-Write-Host "==========================================" -ForegroundColor Lime
+Write-Host "==========================================" -ForegroundColor Yellow
+Write-Host "         NoCheat Checker Loader           " -ForegroundColor Yellow
+Write-Host "==========================================" -ForegroundColor Yellow
 
 # ссылки на файлы в репо
 $repoOwner  = "eleanor-ln"
